@@ -1,14 +1,25 @@
+# go-eventgrid-webhook
 
-# Contributing
+This sample is an Event Grid Web Hook written in Go that supports receiving and processing a sample message type.
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.microsoft.com.
+A complete walkthrough is available here: <https://github.com/peteroden/event-grid-go-quickstart/blob/master/event-grid-webhook-go-quickstart.md>
 
-When you submit a pull request, a CLA-bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+## Developer Prerequisites
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+* Git
+* Go 1.11
+* optional
+    * Azure DevOps access to import CI/CD pipeline
+
+## Repo Organization
+
+* src
+    * contains a sample Web Hook implementation
+
+* azuredevops-import.json
+    * Azure DevOps build pipeline import file
+        * from Azure DevOps / Pipelines / Build, click "new" and choose import a pipeline then select azuredevops-import.json
+            * Note that you will have to setup credentials for dockerhub and github
+
+* sendmsg.sh
+    * a simple shell script for sending a message to event grid
